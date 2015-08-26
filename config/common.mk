@@ -162,6 +162,10 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+# Adaway
+PRODUCT_COPY_FILES += \
+        vendor/triton/prebuilt/common/app/adaway.apk:system/app/adaway.apk
+
 # Versioning System
 # RazorLP first version.
 PRODUCT_VERSION_MAJOR = 5.1.1
