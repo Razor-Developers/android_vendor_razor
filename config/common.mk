@@ -171,9 +171,16 @@ ifdef RAZOR_BUILD_EXTRA
     RAZOR_POSTFIX := -$(RAZOR_BUILD_EXTRA)
 endif
 ifndef RAZOR_BUILD_TYPE
+ifeq ($(RAZOR_RELEASE),true)
+    RAZOR_BUILD_TYPE := OFFICIAL
+    PLATFORM_VERSION_CODENAME := OFFICIAL
+    RAZOR_POSTFIX := -$(shell date +"%Y%m%d")
+
+else
     RAZOR_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
     RAZOR_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+endif
 endif
 
 # Set all versions
