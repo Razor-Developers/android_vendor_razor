@@ -1,2 +1,2 @@
 # Inherit common stuff
-$(call inherit-product, vendor/slim/config/common.mk)
+$(call inherit-product, vendor/razor/config/common.mk)

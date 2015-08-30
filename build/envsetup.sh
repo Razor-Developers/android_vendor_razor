@@ -1,10 +1,10 @@
-# slim functions that extend build/envsetup.sh
+# razor functions that extend build/envsetup.sh
 
-function slim_device_combos() {
+function razor_device_combos() {
     local device
 
     T="$(gettop)"
-    list_file="${T}/vendor/slim/slim.devices"
+    list_file="${T}/vendor/razor/razor.devices"
     variant="userdebug"
 
     if [[ $1 ]]
@@ -26,21 +26,21 @@ function slim_device_combos() {
     if [[ ! -f "${list_file}" ]]
     then
         echo "unable to find device list: ${list_file}"
-        list_file="${T}/vendor/slim/slim.devices"
+        list_file="${T}/vendor/razor/razor.devices"
         echo "defaulting device list file to: ${list_file}"
     fi
 
     while IFS= read -r device
     do
-        add_lunch_combo "slim_${device}-${variant}"
+        add_lunch_combo "razor_${device}-${variant}"
     done < "${list_file}"
 }
 
-function slim_rename_function() {
-    eval "original_slim_$(declare -f ${1})"
+function razor_rename_function() {
+    eval "original_razor_$(declare -f ${1})"
 }
 
-function slim_add_hmm_entry() {
+function razor_add_hmm_entry() {
     f_name="${1}"
     f_desc="${2}"
 
@@ -59,14 +59,14 @@ function slim_add_hmm_entry() {
     HMM_DESCRIPTIVE=(HMM_DESCRIPTIVE[@] "$(_build_entry)")
 }
 
-function slimremote()
+function razorremote()
 {
     if ! git rev-parse &> /dev/null
     then
         echo "Not in a git directory. Please run this from an Android repository you wish to set up."
         return
     fi
-    git remote rm slim 2> /dev/null
+    git remote rm razor 2> /dev/null
 
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
 
@@ -76,8 +76,8 @@ function slimremote()
 
     project="${proj//\//_}"
 
-    git remote add slim "git@github.com:SlimRoms/$pfx$project"
-    echo "Remote 'slim' created"
+    git remote add razor "git@github.com/RAZOR-DEVS/$pfx$project"
+    echo "Remote 'razor' created"
 }
 
 function cmremote()
@@ -131,10 +131,10 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
-function slim_push()
+function razor_push()
 {
     branch="lp5.1"
-    ssh_name="slim_review"
+    ssh_name="razor_review"
     path_opt=
 
     if [[ "$1" ]]
@@ -152,5 +152,5 @@ function slim_push()
         proj="android_$proj"
     fi
 
-    git $path_opt push "ssh://${ssh_name}/SlimRoms/$proj" "HEAD:refs/for/$branch"
+    git $path_opt push "ssh://${ssh_name}/RAZOR-DEVS/$proj" "HEAD:refs/for/$branch"
 }

@@ -1,3 +1,3 @@
-. "$(gettop)/vendor/slim/build/envsetup.sh"
+. "$(gettop)/vendor/razor/build/envsetup.sh"
 
-slim_device_combos
+razor_device_combos
