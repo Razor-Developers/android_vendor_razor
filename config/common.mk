@@ -164,7 +164,7 @@ endif
 
 # Adaway
 PRODUCT_COPY_FILES += \
-        vendor/triton/prebuilt/common/app/adaway.apk:system/app/adaway.apk
+        vendor/razor/prebuilt/common/app/adaway.apk:system/app/adaway.apk
 
 # Versioning System
 # RazorLP first version.
