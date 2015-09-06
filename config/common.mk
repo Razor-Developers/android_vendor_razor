@@ -81,7 +81,8 @@ PRODUCT_PACKAGES += \
 
 # AudioFX
 PRODUCT_PACKAGES += \
-    AudioFX
+    AudioFX \
+    Eleven
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -97,7 +98,6 @@ PRODUCT_PACKAGES += \
     DashClock
 
 #    SlimFileManager removed until updated
-
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
