@@ -147,6 +147,10 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+# Layers Manager
+PRODUCT_COPY_FILES += \
+        vendor/razor/prebuilt/common/app/com.lovejoy777.rroandlayersmanager-12.apk:system/app/LayersManager/com.lovejoy777.rroandlayersmanager-12.apk
+
 # Versioning System
 PRODUCT_VERSION_MAJOR = 6.0.1
 PRODUCT_VERSION_MINOR = alpha
