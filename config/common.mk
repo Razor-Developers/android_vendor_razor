@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
+    SlimOTA \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
@@ -170,7 +170,7 @@ PRODUCT_COPY_FILES += \
 # RazorLP first version.
 PRODUCT_VERSION_MAJOR = 5.1.1
 PRODUCT_VERSION_MINOR = alpha
-PRODUCT_VERSION_MAINTENANCE = 0.3
+PRODUCT_VERSION_MAINTENANCE = 0.4
 ifdef RAZOR_BUILD_EXTRA
     RAZOR_POSTFIX := -$(RAZOR_BUILD_EXTRA)
 endif
