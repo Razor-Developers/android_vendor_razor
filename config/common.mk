@@ -166,6 +166,10 @@ endif
 PRODUCT_COPY_FILES += \
         vendor/razor/prebuilt/common/app/adaway.apk:system/app/adaway.apk
 
+# LayersManager
+PRODUCT_COPY_FILES += \
+        vendor/razor/prebuilt/common/app/com.lovejoy777.rroandlayersmanager-12.apk:system/app/LayersManager/com.lovejoy777.rroandlayersmanager-12.apk
+
 # Versioning System
 # RazorLP first version.
 PRODUCT_VERSION_MAJOR = 5.1.1
