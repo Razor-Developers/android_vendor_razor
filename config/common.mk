@@ -170,6 +170,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         vendor/razor/prebuilt/common/app/com.lovejoy777.rroandlayersmanager-12.apk:system/app/LayersManager/com.lovejoy777.rroandlayersmanager-12.apk
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+        vendor/razor/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+        vendor/razor/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Versioning System
 # RazorLP first version.
 PRODUCT_VERSION_MAJOR = 5.1.1
