@@ -95,7 +95,8 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock \
+    LockClock
 
 #    SlimFileManager removed until updated
 # Extra tools
@@ -179,7 +180,7 @@ PRODUCT_COPY_FILES += \
 # RazorLP first version.
 PRODUCT_VERSION_MAJOR = 5.1.1
 PRODUCT_VERSION_MINOR = BETA
-PRODUCT_VERSION_MAINTENANCE = 0.5
+PRODUCT_VERSION_MAINTENANCE = 0.6
 ifdef RAZOR_BUILD_EXTRA
     RAZOR_POSTFIX := -$(RAZOR_BUILD_EXTRA)
 endif
