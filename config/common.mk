@@ -99,12 +99,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     OmniSwitch
 
-# Screen recorder  
-PRODUCT_PACKAGES += \  
-    ScreenRecorder \  
-    libscreenrecorder 
-
-
 #    SlimFileManager removed until updated
 # Extra tools
 PRODUCT_PACKAGES += \
