@@ -116,7 +116,7 @@ if  [ $FTP = "y" ]; then
 for VAL in "${!FTPHOST[@]}"
 do
 	echo -e "\nConnecting to ${FTPHOST[$VAL]} with user ${FTPUSER[$VAL]}..."
-	ftp -nv <<EOF
+	ftp -in <<EOF
 	open ${FTPHOST[$VAL]}
 	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
 	tick
@@ -129,4 +129,5 @@ done
 	echo -e  "FTP transfer complete! \n"
 fi
 
+rm -rf $STORAGE/*
 echo "All done!"
