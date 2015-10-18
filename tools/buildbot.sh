@@ -118,14 +118,23 @@ do
 	$ATTACH
 	quit
 
+EOF
+done
+
+	if [ $MD5 = "y" ]; then
+for VAL in "${!FTPHOST[@]}"
+do
+
 	ftp -in <<EOF
 	open ${FTPHOST[$VAL]}
 	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
 	cd ${FTPDIR[$VAL]}
 	$ATTACHMD5
 	quit
+
 EOF
 done
+	fi
 
 	echo -e  "FTP transfer complete! \n"
 fi
