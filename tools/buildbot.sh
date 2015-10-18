@@ -79,7 +79,7 @@ fi
 for VAL in "${!PRODUCT[@]}"
 do
 	echo -n "Starting build..."
-	source build/envsetup.sh && lunch ${LUNCHCMD[$VAL]} && time mka -j$J bacon
+	source build/envsetup.sh && lunch ${LUNCHCMD[$VAL]} && time mka -j$J razor
 	echo "done!"
 
 	if [ $MD5 = "y" ]; then
