@@ -105,7 +105,6 @@ if  [ $FTP = "y" ]; then
 	ATTACHROM=`for file in *.zip; do echo -n -e "put ${file}\n"; done`
 	if [ $MD5 = "y" ]; then
 		ATTACHMD5=`for file in *.zip.md5sum; do echo -n -e "put ${file}\n"; done`
-		ATTACH=$ATTACHROM
 	fi
 
 for VAL in "${!FTPHOST[@]}"
@@ -115,7 +114,7 @@ do
 	open ${FTPHOST[$VAL]}
 	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
 	cd ${FTPDIR[$VAL]}
-	$ATTACH
+	$ATTACHROM
 	quit
 
 EOF
@@ -124,7 +123,7 @@ done
 	if [ $MD5 = "y" ]; then
 for VAL in "${!FTPHOST[@]}"
 do
-
+	echo -e "\nConnecting to ${FTPHOST[$VAL]} with user ${FTPUSER[$VAL]}..."
 	ftp -in <<EOF
 	open ${FTPHOST[$VAL]}
 	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
