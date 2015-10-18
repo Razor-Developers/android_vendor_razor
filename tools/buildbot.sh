@@ -105,8 +105,6 @@ if  [ $FTP = "y" ]; then
 	ATTACHROM=`for file in *.zip; do echo -n -e "put ${file}\n"; done`
 	if [ $MD5 = "y" ]; then
 		ATTACHMD5=`for file in *.zip.md5sum; do echo -n -e "put ${file}\n"; done`
-		ATTACH=$ATTACHROM"/n"$ATTACHMD5
-	else
 		ATTACH=$ATTACHROM
 	fi
 
@@ -116,9 +114,15 @@ do
 	ftp -in <<EOF
 	open ${FTPHOST[$VAL]}
 	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
-	tick
 	cd ${FTPDIR[$VAL]}
 	$ATTACH
+	quit
+
+	ftp -in <<EOF
+	open ${FTPHOST[$VAL]}
+	user ${FTPUSER[$VAL]} ${FTPPASS[$VAL]}
+	cd ${FTPDIR[$VAL]}
+	$ATTACHMD5
 	quit
 EOF
 done
