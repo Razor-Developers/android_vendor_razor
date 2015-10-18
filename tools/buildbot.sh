@@ -25,7 +25,7 @@ MOVE=y
 STORAGE=~/android/zips
 
 # your build source code directory path
-SAUCE=$2
+SAUCE=`pwd`
 
 # number for the -j parameter
 J=`nproc`
