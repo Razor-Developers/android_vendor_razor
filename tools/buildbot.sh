@@ -19,6 +19,9 @@ OUTPUTNME[0]="TEAM-RAZOR-$1"		# what you want the new name to be
 export USE_CCACHE=1
 ccache -M 50
 
+# Export Build Type
+export BUILD_TYPE=OFFICIAL
+
 # should they be moved out of the output folder
 # like a dropbox or other cloud storage folder
 # or any other folder you want
