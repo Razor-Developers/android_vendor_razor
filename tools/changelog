@@ -14,7 +14,7 @@ fi
 touch $Changelog
 
 # Print something to build output
-echo ${bldppl}"Generating changelog..."${txtrst}
+echo ${bldppl}"Generating Razor changelog..."${txtrst}
 
 for i in $(seq 5);
 do
