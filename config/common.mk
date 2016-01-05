@@ -28,9 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/razor/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/razor/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/razor/prebuilt/common/bin/50-razor.sh:system/addon.d/50-razor.sh \
-    vendor/razor/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/razor/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/razor/prebuilt/common/bin/50-razor.sh:system/addon.d/50-razor.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -62,15 +60,11 @@ PRODUCT_COPY_FILES += \
     vendor/razor/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/razor/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
-
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
     SpareParts \
-    Superuser \
     su
 
 # Optional packages
