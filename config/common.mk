@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     DashClock \
-    LockClock \
     OmniSwitch
 
 #    SlimFileManager removed until updated
