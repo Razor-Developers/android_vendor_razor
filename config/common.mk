@@ -28,7 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/razor/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/razor/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/razor/prebuilt/common/bin/50-aospb.sh:system/addon.d/50-razor.sh
+    vendor/razor/prebuilt/common/bin/50-razor.sh:system/addon.d/50-razor.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
