@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Apollo
 
+# Custom RaZor packages
+PRODUCT_PACKAGES += \
+	OmniSwitch
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     LatinIME \
