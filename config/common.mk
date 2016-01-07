@@ -74,9 +74,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
-# AudioFX
+# Music
 PRODUCT_PACKAGES += \
-    AudioFX
+    Apollo
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
