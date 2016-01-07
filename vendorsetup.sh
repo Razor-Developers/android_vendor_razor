@@ -1,3 +1,3 @@
-. "$(gettop)/vendor/aospb/build/envsetup.sh"
+. "$(gettop)/vendor/razor/build/envsetup.sh"
 
-aospb_device_combos
+razor_device_combos
