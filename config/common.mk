@@ -81,7 +81,8 @@ PRODUCT_PACKAGES += \
 # Custom RaZor packages
 PRODUCT_PACKAGES += \
 	OmniSwitch \
-	LockClock
+	LockClock \
+	SnapdragonCamera
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
